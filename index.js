@@ -1,4 +1,4 @@
-var notes = [
+var allNotes = [
   {
     "name": "C2",
     "class": "C2",
@@ -428,7 +428,7 @@ var notes = [
 
 ];
 
-var scales = [
+var allScales = [
   {
     "name": "C Major",
     "notes": [0,3,6,9,12,15,18,21]
@@ -459,13 +459,22 @@ var scales = [
   }
 ];
 
+function getNotes(notes) {
+  for (i=0; i < notes.length; i++) {
+    console.log(allNotes[notes[i]].name)
+  }
+}
+
 function getScaleNotes(scale) {
-  for (i=0; i < scales.length; i++) {
-    if(scales[i].name == scale) {
-      console.log(scales[i].name);
-      // console.log(scales[i].notes);
+  for (i=0; i < allScales.length; i++) {
+    if (!scale) {
+      console.log("No scale provided.");
+    } else {
+      if (allScales[i].name == scale) {
+        getNotes(allScales[i].notes);
+      }
     }
   }
 }
 
-getScaleNotes("D Major");
+getScaleNotes();
