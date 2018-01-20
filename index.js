@@ -459,11 +459,115 @@ var allScales = [
   }
 ];
 
+var allChords = [
+  {
+    "name": "Major root",
+    "shorthand": "maj",
+    "chords": [
+      {
+        "name": "1 Chord",
+        "notes": [0,2,4]
+      },
+      {
+        "name": "4 Chord",
+        "notes": [3,5,7]
+      },
+      {
+        "name": "5 Chord",
+        "notes": [4,6,1]
+      },
+    ]
+  },
+  {
+    "name": "Minor root",
+    "shorthand": "m",
+    "chords": [
+      {
+        "name": "2 Chord",
+        "notes": [1,3,5]
+      },
+      {
+        "name": "3 Chord",
+        "notes": [2,4,6]
+      },
+      {
+        "name": "6 Chord",
+        "notes": [5,7,2]
+      },
+      {
+        "name": "7 Chord",
+        "notes": [6,1,3],
+      },
+    ]
+  },
+  {
+    "name": "Major Seven",
+    "shorthand": "maj7",
+    "chords": [
+      {
+        "name": "1 Chord",
+        "notes": [0,2,4,6]
+      },
+      {
+        "name": "4 Chord",
+        "notes": [3,5,7,1]
+      },
+      {
+        "name": "5 Chord",
+        "notes": [4,6,1,3]
+      },
+    ]
+  },
+  {
+    "name": "Minor Seven",
+    "shorthand": "m7",
+    "chords": [
+      {
+        "name": "2 Chord",
+        "notes": [1,3,5,7]
+      },
+      {
+        "name": "3 Chord",
+        "notes": [2,4,6,1]
+      },
+      {
+        "name": "6 Chord",
+        "notes": [5,7,1,3]
+      },
+      {
+        "name": "7 Chord",
+        "notes": [6,1,3,5],
+      },
+    ]
+  },
+  {
+    "name": "Diminished",
+    "shorthand": "º",
+    "chords": [
+      {
+        "name": "Diminished",
+        "notes": [7,1,3],
+      },
+    ]
+  },
+  {
+    "name": "Dominant",
+    "shorthand": "7",
+    "chords": [
+      {
+        "name": "Dominant",
+        "notes": [4,6,1,3],
+      },
+    ]
+  },
+];
+
 function getNotes(notes) {
   for (i=0; i < notes.length; i++) {
     console.log(allNotes[notes[i]].name)
   }
 }
+
 
 function getScaleNotes(scale) {
   for (i=0; i < allScales.length; i++) {
@@ -477,4 +581,22 @@ function getScaleNotes(scale) {
   }
 }
 
-getScaleNotes();
+// function getChordNotes(notes) {
+//   getScaleNotes("D Major");
+//   console.log(allNotes[notes[i]].name)
+//
+// }
+
+function getChordFormula(chord) {
+  for (i=0; i < allChords.length; i++) {
+    if (allChords[i].name == chord) {
+      console.log(allChords[i].name)
+      // getChordNotes(allChords[i].chords.notes);
+    }
+  }
+}
+
+
+// getScaleNotes("A Major");
+// getChordNotes()
+getChordFormula("Major root")
