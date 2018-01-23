@@ -545,7 +545,7 @@ var allChords = [
     "shorthand": "º",
     "chords": [
       {
-        "name": "Diminished",
+        "name": "7 Chord",
         "notes": [7,1,3],
       },
     ]
@@ -555,38 +555,60 @@ var allChords = [
     "shorthand": "7",
     "chords": [
       {
-        "name": "Dominant",
+        "name": "5 Chord",
         "notes": [4,6,1,3],
       },
     ]
   },
 ];
 
-function getChords(scaleNotes) {
-  console.log(scaleNotes);
-}
+function getNotes(scaleNotes, chordNotes) {
+  for (let i=0; i < chordNotes.length; i++) {
+    console.log(scaleNotes[chordNotes[i]]);
+  }
+};
 
-function getNotes(notes) {
+function getChord(chords, scaleNotes) {
+  for (let i=0; i < chords.length; i++) {
+    console.log("------ \n");
+    // name of chord type
+    // console.log(chords[i].notes);
+    getNotes(scaleNotes, chords[i].notes);
+  }
+};
+
+function getChordTypes(scaleNotes) {
+  console.log(scaleNotes);
+  // loop through all possible chord types
+  for (let i=0; i < allChords.length; i++) {
+    // pass through chords in chord type
+    console.log("\n");
+    console.log(allChords[i].name);
+    getChord(allChords[i].chords, scaleNotes);
+  }
+};
+
+function getScaleNotes(notes) {
   var scaleNotes = [];
   for (i=0; i < notes.length; i++) {
     scaleNotes.push(allNotes[notes[i]].name);
   }
-  console.log("Notes in this scale:")
-  getChords(scaleNotes);
-}
+  console.log("Notes in this scale: \n")
+  getChordTypes(scaleNotes);
+};
 
-function getScaleNotes(scale) {
+function getScale(scale) {
   for (i=0; i < allScales.length; i++) {
     if (!scale) {
       console.log("No scale provided.");
     } else {
       if (allScales[i].name == scale) {
-        console.log("Scale:");
-        console.log(allScales[i].name);
-        getNotes(allScales[i].notes);
+        console.log("Scale: \n");
+        console.log(allScales[i].name + "\n");
+        getScaleNotes(allScales[i].notes);
       }
     }
   }
-}
+};
 
-getScaleNotes("A Major")
+getScale("A Major")
