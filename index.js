@@ -562,18 +562,18 @@ var allChords = [
   },
 ];
 
-function getNotes(scaleNotes, chordNotes) {
+function getNotes(scaleNotes, chordNotes, shorthand) {
+  var chordName = scaleNotes[chordNotes[0]];
+  console.log("Chord: " + chordName.substring(0, chordName.length - 1) + shorthand);
   for (let i=0; i < chordNotes.length; i++) {
     console.log(scaleNotes[chordNotes[i]]);
   }
 };
 
-function getChord(chords, scaleNotes) {
+function getChord(chords, scaleNotes, shorthand) {
   for (let i=0; i < chords.length; i++) {
     console.log("------ \n");
-    // name of chord type
-    // console.log(chords[i].notes);
-    getNotes(scaleNotes, chords[i].notes);
+    getNotes(scaleNotes, chords[i].notes, shorthand);
   }
 };
 
@@ -582,9 +582,8 @@ function getChordTypes(scaleNotes) {
   // loop through all possible chord types
   for (let i=0; i < allChords.length; i++) {
     // pass through chords in chord type
-    console.log("\n");
-    console.log(allChords[i].name);
-    getChord(allChords[i].chords, scaleNotes);
+    console.log("\n" + allChords[i].name);
+    getChord(allChords[i].chords, scaleNotes, allChords[i].shorthand);
   }
 };
 
