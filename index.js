@@ -562,12 +562,18 @@ var allChords = [
   },
 ];
 
-function getNotes(notes) {
-  for (i=0; i < notes.length; i++) {
-    console.log(allNotes[notes[i]].name)
-  }
+function getChords(scaleNotes) {
+  console.log(scaleNotes);
 }
 
+function getNotes(notes) {
+  var scaleNotes = [];
+  for (i=0; i < notes.length; i++) {
+    scaleNotes.push(allNotes[notes[i]].name);
+  }
+  console.log("Notes in this scale:")
+  getChords(scaleNotes);
+}
 
 function getScaleNotes(scale) {
   for (i=0; i < allScales.length; i++) {
@@ -575,28 +581,12 @@ function getScaleNotes(scale) {
       console.log("No scale provided.");
     } else {
       if (allScales[i].name == scale) {
+        console.log("Scale:");
+        console.log(allScales[i].name);
         getNotes(allScales[i].notes);
       }
     }
   }
 }
 
-// function getChordNotes(notes) {
-//   getScaleNotes("D Major");
-//   console.log(allNotes[notes[i]].name)
-//
-// }
-
-function getChordFormula(chord) {
-  for (i=0; i < allChords.length; i++) {
-    if (allChords[i].name == chord) {
-      console.log(allChords[i].name)
-      // getChordNotes(allChords[i].chords.notes);
-    }
-  }
-}
-
-
-// getScaleNotes("A Major");
-// getChordNotes()
-getChordFormula("Major root")
+getScaleNotes("A Major")
