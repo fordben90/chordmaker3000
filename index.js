@@ -546,7 +546,7 @@ var allChords = [
     "chords": [
       {
         "name": "7 Chord",
-        "notes": [7,1,3],
+        "notes": [6,1,3],
       },
     ]
   },
@@ -566,7 +566,8 @@ function getNotes(scaleNotes, chordNotes, shorthand) {
   var chordName = scaleNotes[chordNotes[0]];
   console.log("Chord: " + chordName.substring(0, chordName.length - 1) + shorthand);
   for (let i=0; i < chordNotes.length; i++) {
-    console.log(scaleNotes[chordNotes[i]]);
+    let chordNote = (scaleNotes[chordNotes[i]]);
+    console.log(chordNote.substring(0, chordNote.length - 1));
   }
 };
 
@@ -610,4 +611,4 @@ function getScale(scale) {
   }
 };
 
-getScale("A Major")
+getScale("C Major")
