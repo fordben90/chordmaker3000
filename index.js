@@ -465,15 +465,15 @@ var allChords = [
     "shorthand": "",
     "chords": [
       {
-        "name": "1 Chord",
+        "scale degree": "I",
         "notes": [0,2,4]
       },
       {
-        "name": "4 Chord",
+        "scale degree": "IV",
         "notes": [3,5,7]
       },
       {
-        "name": "5 Chord",
+        "scale degree": "V",
         "notes": [4,6,1]
       },
     ]
@@ -483,15 +483,15 @@ var allChords = [
     "shorthand": "m",
     "chords": [
       {
-        "name": "2 Chord",
+        "scale degree": "ii",
         "notes": [1,3,5]
       },
       {
-        "name": "3 Chord",
+        "scale degree": "iii",
         "notes": [2,4,6]
       },
       {
-        "name": "6 Chord",
+        "scale degree": "vi",
         "notes": [5,7,2]
       },
     ]
@@ -501,11 +501,11 @@ var allChords = [
     "shorthand": "maj7",
     "chords": [
       {
-        "name": "1 Chord",
+        "scale degree": "IM7",
         "notes": [0,2,4,6]
       },
       {
-        "name": "4 Chord",
+        "scale degree": "IVM7",
         "notes": [3,5,7,2]
       },
     ]
@@ -515,7 +515,7 @@ var allChords = [
     "shorthand": "7",
     "chords": [
       {
-        "name": "5 Chord",
+        "scale degree": "V7",
         "notes": [4,6,1,3]
       }
     ]
@@ -525,15 +525,15 @@ var allChords = [
     "shorthand": "m7",
     "chords": [
       {
-        "name": "2 Chord",
+        "scale degree": "ii7",
         "notes": [1,3,5,7]
       },
       {
-        "name": "3 Chord",
+        "scale degree": "iii7",
         "notes": [2,4,6,1]
       },
       {
-        "name": "6 Chord",
+        "scale degree": "vi7",
         "notes": [5,7,2,4]
       },
     ]
@@ -543,7 +543,7 @@ var allChords = [
     "shorthand": "m7b5",
     "chords": [
       {
-        "name": "7 Chord",
+        "scale degree": "viiº7",
         "notes": [6,1,3,5],
       },
     ]
@@ -553,7 +553,7 @@ var allChords = [
     "shorthand": "º",
     "chords": [
       {
-        "name": "7 Chord",
+        "scale degree": "viiº",
         "notes": [6,1,3],
       },
     ]
@@ -563,7 +563,7 @@ var allChords = [
     "shorthand": "7",
     "chords": [
       {
-        "name": "5 Chord",
+        "scale degree": "V",
         "notes": [4,6,1,3],
       },
     ]
