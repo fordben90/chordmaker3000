@@ -462,7 +462,7 @@ var allScales = [
 var allChords = [
   {
     "name": "Major root",
-    "shorthand": "",
+    "quality": "",
     "chords": [
       {
         "scale degree": "I",
@@ -480,7 +480,7 @@ var allChords = [
   },
   {
     "name": "Minor root",
-    "shorthand": "m",
+    "quality": "m",
     "chords": [
       {
         "scale degree": "ii",
@@ -498,7 +498,7 @@ var allChords = [
   },
   {
     "name": "Major Seven",
-    "shorthand": "maj7",
+    "quality": "maj7",
     "chords": [
       {
         "scale degree": "IM7",
@@ -512,7 +512,7 @@ var allChords = [
   },
   {
     "name": "Dominant Seven",
-    "shorthand": "7",
+    "quality": "7",
     "chords": [
       {
         "scale degree": "V7",
@@ -522,7 +522,7 @@ var allChords = [
   },
   {
     "name": "Minor Seven",
-    "shorthand": "m7",
+    "quality": "m7",
     "chords": [
       {
         "scale degree": "ii7",
@@ -540,7 +540,7 @@ var allChords = [
   },
   {
     "name": "Minor Seven Flat Five",
-    "shorthand": "m7b5",
+    "quality": "m7b5",
     "chords": [
       {
         "scale degree": "viiº7",
@@ -550,7 +550,7 @@ var allChords = [
   },
   {
     "name": "Diminished",
-    "shorthand": "º",
+    "quality": "º",
     "chords": [
       {
         "scale degree": "viiº",
@@ -560,7 +560,7 @@ var allChords = [
   },
   {
     "name": "Dominant",
-    "shorthand": "7",
+    "quality": "7",
     "chords": [
       {
         "scale degree": "V",
@@ -570,19 +570,19 @@ var allChords = [
   },
 ];
 
-function getNotes(scaleNotes, chordNotes, shorthand) {
+function getNotes(scaleNotes, chordNotes, quality) {
   var chordName = scaleNotes[chordNotes[0]];
-  console.log("Chord: " + chordName.substring(0, chordName.length - 1) + shorthand);
+  console.log("Chord: " + chordName.substring(0, chordName.length - 1) + quality);
   for (let i=0; i < chordNotes.length; i++) {
     let chordNote = (scaleNotes[chordNotes[i]]);
     console.log(chordNote.substring(0, chordNote.length - 1));
   }
 };
 
-function getChord(chords, scaleNotes, shorthand) {
+function getChord(chords, scaleNotes, quality) {
   for (let i=0; i < chords.length; i++) {
     console.log("------ \n");
-    getNotes(scaleNotes, chords[i].notes, shorthand);
+    getNotes(scaleNotes, chords[i].notes, quality);
   }
 };
 
@@ -592,7 +592,7 @@ function getChordTypes(scaleNotes) {
   for (let i=0; i < allChords.length; i++) {
     // pass through chords in chord type
     console.log("\n" + allChords[i].name);
-    getChord(allChords[i].chords, scaleNotes, allChords[i].shorthand);
+    getChord(allChords[i].chords, scaleNotes, allChords[i].quality);
   }
 };
 
