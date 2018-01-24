@@ -462,7 +462,7 @@ var allScales = [
 var allChords = [
   {
     "name": "Major root",
-    "shorthand": "maj",
+    "shorthand": "",
     "chords": [
       {
         "name": "1 Chord",
@@ -494,10 +494,6 @@ var allChords = [
         "name": "6 Chord",
         "notes": [5,7,2]
       },
-      {
-        "name": "7 Chord",
-        "notes": [6,1,3],
-      },
     ]
   },
   {
@@ -510,12 +506,18 @@ var allChords = [
       },
       {
         "name": "4 Chord",
-        "notes": [3,5,7,1]
+        "notes": [3,5,7,2]
       },
+    ]
+  },
+  {
+    "name": "Dominant Seven",
+    "shorthand": "7",
+    "chords": [
       {
         "name": "5 Chord",
         "notes": [4,6,1,3]
-      },
+      }
     ]
   },
   {
@@ -532,8 +534,14 @@ var allChords = [
       },
       {
         "name": "6 Chord",
-        "notes": [5,7,1,3]
+        "notes": [5,7,2,4]
       },
+    ]
+  },
+  {
+    "name": "Minor Seven Flat Five",
+    "shorthand": "m7b5",
+    "chords": [
       {
         "name": "7 Chord",
         "notes": [6,1,3,5],
